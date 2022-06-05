@@ -5,10 +5,9 @@
 //  Created by Марсель Фаткуллин on 30.05.2022.
 //
 
-import Foundation
 import SwiftUI
 
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     case bubblegum
     case buttercup
     case indigo
@@ -39,5 +38,9 @@ enum Theme: String {
     //значения будут переводится в формат с заглавной буквой
     var name: String {
         rawValue.capitalized
+    }
+    
+    var id: String {
+        name
     }
 }
